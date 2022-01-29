@@ -1,0 +1,89 @@
+decision_mzilli_tf_candidate = {
+	#enactment_time = 90
+	resources = {
+		category = decisions
+		cost = {
+			energy = 5000
+			influence = 25
+		}
+	}
+
+	prerequisites = {
+		"mzilli_tf_candidates_tech"
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_barren
+			is_planet_class = pc_barren_cold
+			is_planet_class = pc_toxic
+			is_planet_class = pc_gray_goo
+		}
+		planet_size < 26
+		OR = {
+			planet_size > 9
+			AND = {
+				is_moon = yes
+				solar_system = {
+					any_system_planet = {
+						has_planet_flag = planet_earth
+						any_moon = { is_same_value = root }
+					}
+				}
+			}
+		}
+		NOR = {
+			has_modifier = doomsday_1
+			has_modifier = mzilli_tf_candidates_assessing
+			has_modifier = terraforming_candidate
+			has_modifier = mzilli_paraterraforming_candidate
+			has_planet_flag = no_life_for_you
+			has_planet_flag = planet_mercury
+		}
+		solar_system = {
+			NOR = {
+				is_star_class = sc_black_hole
+				is_star_class = sc_neutron_star
+				is_star_class = sc_pulsar
+				any_system_planet = {
+					OR = {
+						is_planet_class = pc_black_hole
+						is_planet_class = pc_neutron_star
+						is_planet_class = pc_pulsar
+					}
+					has_moon = yes
+					any_moon = {
+						OR = {
+							is_same_value = root
+							AND = {
+								has_moon = yes
+								any_moon = { is_same_value = root }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	allow = { NOT = { has_anomaly = yes } }
+
+	effect = {
+		custom_tooltip = decision_mzilli_tf_candidate_tooltip
+		hidden_effect = {
+			add_modifier = {
+				modifier = mzilli_tf_candidates_assessing
+				days = -1
+			}
+			planet_event = {
+				id = mzilli_tf.6
+				days = 90
+				random = 90
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}

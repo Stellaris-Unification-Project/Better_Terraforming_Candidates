@@ -1,0 +1,366 @@
+@gaiaCost = 7500
+@gaiaTime = 3600
+
+@machineCost = 10000
+@machineTime = 7200
+
+@hiveCost = 10000
+@hiveTime = 7200
+
+@toxicCost = 10000
+@toxicTime = 5400
+
+##################
+## Toxic World ##
+##################
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_continental"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @toxicCost
+		}
+	}
+
+	duration = @toxicTime
+
+	potential = {
+		from = { has_modifier = terraforming_candidate }
+	}
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_tropical"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @toxicCost
+		}
+	}
+
+	duration = @toxicTime
+
+	potential = {
+		from = { has_modifier = terraforming_candidate }
+	}
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_ocean"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @toxicCost
+		}
+	}
+
+	duration = @toxicTime
+
+	potential = {
+		from = { has_modifier = terraforming_candidate }
+	}
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_arid"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @toxicCost
+		}
+	}
+
+	duration = @toxicTime
+
+	potential = {
+		from = { has_modifier = terraforming_candidate }
+	}
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_desert"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @toxicCost
+		}
+	}
+
+	duration = @toxicTime
+
+	potential = {
+		from = { has_modifier = terraforming_candidate }
+	}
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_savannah"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @toxicCost
+		}
+	}
+
+	duration = @toxicTime
+
+	potential = {
+		from = { has_modifier = terraforming_candidate }
+	}
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_arctic"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @toxicCost
+		}
+	}
+
+	duration = @toxicTime
+
+	potential = {
+		from = { has_modifier = terraforming_candidate }
+	}
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_alpine"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @toxicCost
+		}
+	}
+
+	duration = @toxicTime
+
+	potential = {
+		from = { has_modifier = terraforming_candidate }
+	}
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_tundra"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @toxicCost
+		}
+	}
+
+	duration = @toxicTime
+
+	potential = {
+		from = { has_modifier = terraforming_candidate }
+	}
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 5
+	}
+}
+
+terraform_link = {
+	to = "pc_hive"
+	from = "pc_toxic"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @hiveCost
+		}
+	}
+
+	duration = @hiveTime
+
+	potential = {
+		has_ascension_perk = ap_hive_worlds
+		from = { has_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 20
+	}
+}
+
+terraform_link = {
+	from = "pc_toxic"
+	to = "pc_gaia"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @highestCost
+		}
+	}
+
+	duration = @highestTime
+
+	potential = {
+		has_ascension_perk = "ap_world_shaper"
+		from = { has_modifier = terraforming_candidate }
+	}
+
+	condition = {
+		has_technology = "tech_climate_restoration"
+	}
+
+	effect = {
+		from = { remove_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 10
+	}
+}
+
+terraform_link = {
+	to = "pc_machine"
+	from = "pc_toxic"
+
+	resources = {
+		category = terraforming
+
+		cost = {
+			energy = @machineCost
+		}
+	}
+
+	duration = @machineTime
+
+	potential = {
+		has_ascension_perk = ap_machine_worlds
+		from = { has_modifier = terraforming_candidate }
+	}
+
+	ai_weight = {
+		weight = 20
+		#It's a barren world!
+	}
+}

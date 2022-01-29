@@ -1,0 +1,9 @@
+mzilli_terraforming_candidate = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
+	icon_frame = 1
+}
+
+mzilli_tf_candidates_assessing = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_land_appropriated.dds"
+	icon_frame = 1
+}

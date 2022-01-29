@@ -1,0 +1,38 @@
+﻿l_english:
+
+mzilli_terraforming_candidate:0 "$terraforming_candidate$"
+mzilli_terraforming_candidate_desc:0 "$terraforming_candidate_desc$"
+
+mzilli_tf.2.a:0 "Inform the [owner.GetRulerTitle] of any additional worlds like these."
+tooltip_mzilli_tf.2.a:0 "$TERRAFORMING_CANDIDATE_EFFECT$\n\nWe will be notified whenever a new §E$terraforming_candidate$§! is surveyed."
+mzilli_tf.2.b:0 "No need for a full report. Just note the location for later."
+tooltip_mzilli_tf.2.b:0 "$TERRAFORMING_CANDIDATE_EFFECT$\n\nWe will not be notified when a new §E$terraforming_candidate$§! is surveyed, but they will still be visible in the Expansion Planner."
+
+mzilli_tf_candidates_tech:0 "Artificial Panspermia"
+mzilli_tf_candidates_tech_desc:0 "$decision_mzilli_tf_candidate_desc$"
+
+decision_mzilli_tf_candidate:0 "Reassess Habitability"
+decision_mzilli_tf_candidate_desc:0 "As our terraforming technology improves, it is worth re-examining the otherwise-inhospitable planets and moons in our space for potential colony sites."
+decision_mzilli_tf_candidate_tooltip:0 "When used on a §YBarren§! or §Y$pc_toxic$§!, has a chance to mark it as a §E$terraforming_candidate$§!. This Decision takes several months to complete and can only be enacted once per world.\n\nPlanetary bodies with the following characteristics are more likely to be successful:\n- Smaller in size, with £planetsize£ §Y10§! being optimal and £planetsize£ §Y25§! being least optimal\n- Was once home to a biosphere, as discovered through anomalies or archaeology\n- Orbits at least one main-sequence star (class §RM§!, §HK§!, §YG§!, F, §EA§!, §BB§!, or §MO§!)"
+
+mzilli_tf_candidates_assessing:0 "Reassessing Habitability"
+mzilli_tf_candidates_assessing_desc:0 "This [This.GetPlanetMoon] is being assessed as a candidate for terraforming."
+
+mzilli_tf.3.name:0 "A Nascent [decision_mzilli_tf_candidate.GetPlanetMoonCap]"
+mzilli_tf.3.desc:0 "Our surveyors on §Y[decision_mzilli_tf_candidate.GetName]§! are pleased to report that the [decision_mzilli_tf_candidate.GetPlanetMoon] can, indeed, be terraformed after all. There are enough volatiles on the surface and beneath the crust to support an ecosystem, once the [decision_mzilli_tf_candidate.GetPlanetMoon]'s atmosphere and temperature has been modified appropriately."
+tooltip_mzilli_tf.3:0 "§Y[decision_mzilli_tf_candidate.GetName]§! is now recognized as a §Y$terraforming_candidate$§!."
+
+mzilli_tf.4.name:0 "A Dead [decision_mzilli_tf_candidate.GetPlanetMoonCap]"
+mzilli_tf.4.desc:0 "Our surveyors on §Y[decision_mzilli_tf_candidate.GetName]§! have determined that the [decision_mzilli_tf_candidate.GetPlanetMoon] is not suitable for terraforming after all. The [decision_mzilli_tf_candidate.GetPlanetMoon]'s atmosphere and gravity simply will not cooperate with attempts to make it livable for [Root.GetAdj] colonists, at least not for the foreseeable future."
+tooltip_mzilli_tf.4:0 "§Y[decision_mzilli_tf_candidate.GetName]§! cannot be terraformed after all."
+
+mzilli_tf.5.name:0 "$terraforming_candidate$s"
+mzilli_tf.5.desc:0 "How many §Y$terraforming_candidate$s§! -- Barren or Toxic Worlds that can be brought to life with the right technology -- do you want present in the galaxy?"
+mzilli_tf.5.rare:0 "Just a handful."
+mzilli_tf.5.rare.tooltip:0 "$terraforming_candidate$s will be somewhat rare."
+mzilli_tf.5.uncommon:0 "Quite a few."
+mzilli_tf.5.uncommon.tooltip:0 "$terraforming_candidate$s will be twice as common."
+mzilli_tf.5.common:0 "Lots of them!"
+mzilli_tf.5.common.tooltip:0 "$terraforming_candidate$s will be three times as common."
+mzilli_tf.5.very_common:0 "§HAll§! of them!"
+mzilli_tf.5.very_common.tooltip:0 "$terraforming_candidate$s will be four times as common."

@@ -1,0 +1,33 @@
+pm_mzilli_tf = {
+	spawn_chance = {		
+		modifier = {
+			add = 10
+			OR = {
+				is_planet_class = pc_barren
+				is_planet_class = pc_barren_cold
+			}	
+		}
+		modifier = {
+			add = 15
+			is_planet_class = pc_toxic
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_global_flag = game_started
+				has_deposit = yes
+				has_modifier = terraforming_candidate
+				has_modifier = mzilli_terraforming_candidate
+				has_modifier = mzilli_paraterraforming_candidate
+				planet_size < 9
+				planet_size > 25
+				has_planet_flag = machine_world_1
+				has_planet_flag = machine_world_2
+				has_planet_flag = machine_world_3
+				has_planet_flag = machine_world_4
+				has_planet_flag = utopian_planet
+			}
+		}
+	}
+	modifier = "mzilli_terraforming_candidate"
+}

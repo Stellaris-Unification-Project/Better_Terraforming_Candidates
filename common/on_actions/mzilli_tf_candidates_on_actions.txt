@@ -1,0 +1,14 @@
+on_game_start = {
+	events = {
+		mzilli_tf.1
+	}
+}
+
+# A ship has surveyed a planet.
+# Scope = Ship
+# From = Planet
+on_survey = {
+	events = {
+		mzilli_tf.2
+	}
+}
