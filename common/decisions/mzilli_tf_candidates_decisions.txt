@@ -66,7 +66,7 @@ decision_mzilli_tf_candidate = {
 		}
 	}
 
-	allow = { NOT = { has_anomaly = yes } }
+	allow = { has_anomaly = no }
 
 	effect = {
 		custom_tooltip = decision_mzilli_tf_candidate_tooltip
